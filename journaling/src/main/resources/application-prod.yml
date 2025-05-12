@@ -1,0 +1,9 @@
+spring:
+  data:
+    mongodb:
+      host: localhost
+      uri: mongodb+srv://chnadrakarnehil06112002:tHX31Vk3lzL4KQnm@cluster0.ty8x7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      database: JournalDb
+      auto-index-creation: true
+  application:
+    name: journaling

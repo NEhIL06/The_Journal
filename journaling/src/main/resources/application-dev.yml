@@ -1,0 +1,13 @@
+spring:
+  data:
+    mongodb:
+      host: localhost
+      uri: mongodb+srv://chnadrakarnehil06112002:tHX31Vk3lzL4KQnm@cluster0.ty8x7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      database: JournalDb
+      auto-index-creation: true
+  application:
+    name: journaling
+  redis:
+    host: redis-16618.crce179.ap-south-1-1.ec2.redns.redis-cloud.com
+    port: 16618
+    password: YqPHDu0HEtQxE3BPMB3cptuiSgtUFbfY
