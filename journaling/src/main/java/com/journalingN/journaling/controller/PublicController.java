@@ -48,11 +48,13 @@ public class PublicController {
     public ResponseEntity<String> Login (@RequestBody User user){
         try{
             authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(user.getUserName(),user.getPassword()));
+            System.out.print("this works till here");
             UserDetails userDetails = userDetailsService.loadUserByUsername(user.getUserName());
             String jwt = jwtUtil.generateToken(userDetails.getUsername());
             return new ResponseEntity<>(jwt, HttpStatus.OK);
         } catch (Exception e) {
-            return new ResponseEntity<>("The User Auth Details are not Correct",HttpStatus.BAD_REQUEST);
+            String err = "Some Error Occured" + e;
+            return new ResponseEntity<>(err,HttpStatus.BAD_REQUEST);
         }
     }
 

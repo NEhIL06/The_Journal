@@ -30,7 +30,8 @@ public class weatherService {
          if(weatherResponse!=null) return weatherResponse;
          else {
              String url = appCache.APP_CACHE.get("weather_api").replace("<CITY>",city).replace("<apikey>",apikey);
-             ResponseEntity<WeatherResponse> exchange = restTemplate.exchange(url, HttpMethod.GET,null , WeatherResponse.class);//deCERealization
+             //ResponseEntity<WeatherResponse> exchange = restTemplate.exchange(url, HttpMethod.GET,null , WeatherResponse.class);//deCERealization
+             ResponseEntity<WeatherResponse> exchange = restTemplate.exchange(url,HttpMethod.GET,null,WeatherResponse.class);
              WeatherResponse body = exchange.getBody();
              if(body!=null) redisService.set("Weather_of" + city,body,300L);
              return body;

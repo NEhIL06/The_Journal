@@ -30,15 +30,12 @@ public class  UserService {
     //Methods below
     public void saveNewUser(User user){
         try{
+            System.out.print(user.getPassword());
             user.setPassword(passwordEncoder.encode(user.getPassword()));
-            user.setRoles(Arrays.asList("User"));
+            user.setRoles(List.of("User"));
             userRepo.save(user);
         } catch (Exception e) {
-            log.info("Something is Gonna come ");
-            log.error("Something is Error");
-            log.warn("Something is warn");
-            log.debug("Something is debug");
-            log.trace("Something is traced");
+            log.info(e.toString());
             throw new RuntimeException(e);
         }
     }

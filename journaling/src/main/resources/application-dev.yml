@@ -8,6 +8,4 @@ spring:
   application:
     name: journaling
   redis:
-    host: redis-16618.crce179.ap-south-1-1.ec2.redns.redis-cloud.com
-    port: 16618
-    password: YqPHDu0HEtQxE3BPMB3cptuiSgtUFbfY
+    uri: docker run -it --rm redis:alpine redis-cli -u redis://default:anEa1JxGSPA6H3aOxR4jd1XxIuAMSdXS@redis-10369.crce179.ap-south-1-1.ec2.redns.redis-cloud.com:10369

@@ -68,7 +68,7 @@ public class JournalEntryControllerV2 {
 
 
 
-    @GetMapping("id/{myId}")
+    @GetMapping("/id/{myId}")
     public ResponseEntity<JournalEntry> getJournalEntryById(@PathVariable ObjectId myId) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String userName = authentication.getName();
@@ -84,7 +84,7 @@ public class JournalEntryControllerV2 {
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
-    @DeleteMapping("id/{myId}")
+    @DeleteMapping("/id/{myId}")
     public ResponseEntity<?> deleteEntryById(@PathVariable ObjectId myId){
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String userName = authentication.getName();
@@ -96,7 +96,7 @@ public class JournalEntryControllerV2 {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
-    @PutMapping("id/{myId}")
+    @PutMapping("/id/{myId}")
     public ResponseEntity<JournalEntry> updateJournalById(
             @PathVariable ObjectId myId,
             @RequestBody JournalEntry myJournal
@@ -105,12 +105,13 @@ public class JournalEntryControllerV2 {
         String userName = authentication.getName();
         User user = userService.findByUserName(userName);
         //to check if the current user's requested id is his own or not and list it
-        List<JournalEntry> collect = user.getJournalEntries().stream().filter(x -> x.getId().equals(myId)).collect(Collectors.toList());
+        List<JournalEntry> collect = user.getJournalEntries().stream().filter(x -> x.getId().equals(myId)).toList();
         JournalEntry old = journalEntryService.findByID(myId).orElse(null);
         if (!collect.isEmpty()) {
             Optional<JournalEntry> journalEntry = journalEntryService.findByID(myId);
             if (journalEntry.isPresent()) {
-                old.setTitle(!myJournal.getTitle().isEmpty() && myJournal.getTitle()!= null  ? myJournal.getTitle() : old.getTitle());
+                assert old != null;
+                old.setTitle(!myJournal.getTitle().isEmpty() ? myJournal.getTitle() : old.getTitle());
                 old.setContent(myJournal.getContent()!= null && !myJournal.getContent().isEmpty() ? myJournal.getContent() : old.getTitle());
                 old.setDate(LocalDateTime.now());
                 journalEntryService.saveEntry(old);

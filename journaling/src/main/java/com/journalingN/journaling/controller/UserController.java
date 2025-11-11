@@ -1,6 +1,4 @@
 package com.journalingN.journaling.controller;
-
-
 import com.journalingN.journaling.api.responce.WeatherResponse;
 import com.journalingN.journaling.repository.userRepo;
 import com.journalingN.journaling.entity.User;
@@ -52,10 +50,12 @@ public class UserController {
     @GetMapping
     public ResponseEntity<?> greetings() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        WeatherResponse weatherResponse = weatherService.getWeather("Tumkuru");
-        String greeting  = "" ;
-        if(weatherResponse!= null) {
+        String greeting="";
+        try{
+            WeatherResponse weatherResponse = weatherService.getWeather("Tumkuru");
             greeting = " For Tumkuru " +" , Weather Feels like " + weatherResponse.getCurrent().getFeelslike() ;
+        } catch (Exception e) {
+            greeting = "how are you today ";
         }
         return new ResponseEntity<>("Hi " + authentication.getName() + greeting ,HttpStatus.OK);
     }
