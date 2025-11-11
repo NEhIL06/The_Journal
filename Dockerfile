@@ -1,4 +1,4 @@
-FROM maven:3.9.8-eclipse-temurin-17 AS build
+FROM maven:3.9.8-eclipse-temurin-21 AS build
 WORKDIR /build
 
 # Copy only module first to leverage Docker layer caching
@@ -9,7 +9,7 @@ WORKDIR /build/journaling
 RUN mvn -B -DskipTests package
 
 # Runtime image
-FROM eclipse-temurin:17-jre
+FROM eclipse-temurin:21-jre
 WORKDIR /app
 
 COPY --from=build /build/journaling/target/*.jar /app/app.jar

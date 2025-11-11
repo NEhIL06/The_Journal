@@ -5,23 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e7fe08df-1683-4fdf-be9b-9977eb51a379" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/journaling/src/test/java/com/journalingN/journaling/repository/JournalEntryControllerV2Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/journaling/journalApp.log" beforeDir="false" afterPath="$PROJECT_DIR$/journaling/journalApp.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/journaling/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/journaling/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/journaling/src/main/java/com/journalingN/journaling/config/SpringSecurity.java" beforeDir="false" afterPath="$PROJECT_DIR$/journaling/src/main/java/com/journalingN/journaling/config/SpringSecurity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/journaling/src/main/java/com/journalingN/journaling/controller/JournalEntryControllerV2.java" beforeDir="false" afterPath="$PROJECT_DIR$/journaling/src/main/java/com/journalingN/journaling/controller/JournalEntryControllerV2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/journaling/src/main/java/com/journalingN/journaling/controller/PublicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/journaling/src/main/java/com/journalingN/journaling/controller/PublicController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/journaling/src/main/java/com/journalingN/journaling/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/journaling/src/main/java/com/journalingN/journaling/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/journaling/src/main/java/com/journalingN/journaling/filter/jwtFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/journaling/src/main/java/com/journalingN/journaling/filter/jwtFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/journaling/src/main/java/com/journalingN/journaling/services/RedisService.java" beforeDir="false" afterPath="$PROJECT_DIR$/journaling/src/main/java/com/journalingN/journaling/services/RedisService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/journaling/src/main/java/com/journalingN/journaling/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/journaling/src/main/java/com/journalingN/journaling/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/journaling/src/main/java/com/journalingN/journaling/services/weatherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/journaling/src/main/java/com/journalingN/journaling/services/weatherService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/journaling/src/main/java/com/journalingN/journaling/utils/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/journaling/src/main/java/com/journalingN/journaling/utils/JwtUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/journaling/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/journaling/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/journaling/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/journaling/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
